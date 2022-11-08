@@ -1,0 +1,23 @@
+{
+  "name": "js-eCommerce",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tailwindcss -i ./src/input.css -o ./public/assets/css/tailwind.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/humayunahmed82/js-eCommerce.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/humayunahmed82/js-eCommerce/issues"
+  },
+  "homepage": "https://github.com/humayunahmed82/js-eCommerce#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.2.2"
+  }
+}
