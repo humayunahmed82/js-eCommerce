@@ -55,7 +55,13 @@ const HomeScreen = {
                                     <p>By: ${product.brand}</p>
                                 </div>
                                 <div class="text-slate-200 text-base font-semibold">
-                                    <span class="">$${product.price}</span>
+                                    <span class="">${new Intl.NumberFormat(
+                                        "en-US",
+                                        {
+                                            style: "currency",
+                                            currency: "USD",
+                                        }
+                                    ).format(product.price)}</span>
                                 </div>
                             </div>
                         </div>
