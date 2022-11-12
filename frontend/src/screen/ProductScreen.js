@@ -60,6 +60,18 @@ const ProductScreen = {
                                 currency: "USD",
                             }).format(product.price)}</span>
                         </div>
+                        <div class="text-slate-200 text-sm font-medium pt-10 ">
+                            <span>Stock: ${
+                                product.countInStock > 0
+                                    ? `<span class="text-lime-400">In Stock</span>`
+                                    : `<span class="text-red-700">Out of Stock</span>`
+                            }</span>
+                        </div>
+                        <div class="pt-5">
+                            <button class="disabled:opacity-50 text-md font-semibold text-slate-300 px-8 py-2 bg-sky-500 rounded-full" ${
+                                product.countInStock > 0 ? "" : "disabled"
+                            } >Add to Cart</button>
+                        </div>
                         <div class=""></div>
                     </div>
 

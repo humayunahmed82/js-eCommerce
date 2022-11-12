@@ -31,12 +31,21 @@ const HomeScreen = {
                             (product) => `
                         <!-- Single Product start -->
                         <div class="single-product">
-                            <div class="single-product-image rounded-t-md overflow-hidden">
+                            <div class="single-product-image rounded-t-md overflow-hidden relative">
                                 <a class="block" href="/#/product/${
                                     product._id
                                 }"> <img src="${product.image}" alt="${
                                 product.name
                             }"></a>
+
+                            
+                            <span class="absolute top-0 left-0">
+                            ${
+                                product.countInStock > 0
+                                    ? `<span class="bg-lime-400 rounded-tl-md rounded-br-md text-sm font-medium text-slate-800 block px-3 py-2">In Stock</span>`
+                                    : `<span class="bg-red-700 rounded-tl-md rounded-br-md text-sm font-medium text-slate-300 block px-3 py-2">Out of Stock</span>`
+                            }
+                            </span>
                             </div>
                             <div
                                 class="single-product-content rounded-b-md p-4 border border-solid border-slate-300/10 space-y-3">

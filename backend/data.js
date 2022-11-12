@@ -9,7 +9,7 @@ export default {
             brand: "widFood",
             rating: 4.5,
             numberReview: 13,
-            countInStock: 10,
+            countInStock: 0,
         },
         {
             _id: 2,
@@ -53,7 +53,7 @@ export default {
             brand: "widFood",
             rating: 3.5,
             numberReview: 10,
-            countInStock: 10,
+            countInStock: 0,
         },
         {
             _id: 5,
@@ -75,7 +75,7 @@ export default {
             brand: "widFood",
             rating: 4.5,
             numberReview: 17,
-            countInStock: 10,
+            countInStock: 0,
         },
         {
             _id: 8,
@@ -86,7 +86,7 @@ export default {
             brand: "widFood",
             rating: 2.5,
             numberReview: 5,
-            countInStock: 10,
+            countInStock: 15,
         },
         {
             _id: 9,
@@ -97,7 +97,7 @@ export default {
             brand: "widFood",
             rating: 4,
             numberReview: 10,
-            countInStock: 10,
+            countInStock: 0,
         },
         {
             _id: 10,
@@ -108,7 +108,7 @@ export default {
             brand: "widFood",
             rating: 5,
             numberReview: 20,
-            countInStock: 10,
+            countInStock: 20,
         },
     ],
 };
