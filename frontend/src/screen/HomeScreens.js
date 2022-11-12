@@ -1,22 +1,24 @@
-import data from "../data.js";
-import Rating from "../components/rating.js";
+import Rating from "../components/Rating.js";
+
+import axios from "axios";
 
 const HomeScreen = {
     render: async () => {
-        const response = await fetch("http://localhost:5000/api/products", {
+        const response = await axios({
+            url: "http://localhost:5000/api/products",
             headers: {
                 "Content-Type": "application/json",
             },
         });
 
-        if (!response || !response.ok) {
-            return ` <div class="container">
+        if (!response || response.statusText !== "OK") {
+            return `<div class="container">
                         <div class="py-12 text-center">
                             <div class="text-slate-200 text-3xl font-semibold">Error in getting Data</div>
                         </div>
                     </div>`;
         }
-        const products = await response.json();
+        const products = await response.data;
 
         return `
         <!-- Product start -->
@@ -44,12 +46,11 @@ const HomeScreen = {
                                 product.name
                             }</a></h4>
                                
-                                <div class="flex space-x-2 items-center">
-                                 ${Rating.render({
-                                     value: product.rating,
-                                     text: `${product.numberReview} Review`,
-                                 })}
-                                </div>
+                                ${Rating.render({
+                                    value: product.rating,
+                                    text: `${product.numberReview} Review`,
+                                })}
+                                
                                 <div class="text-slate-200 text-sm font-semibold">
                                     <p>By: ${product.brand}</p>
                                 </div>

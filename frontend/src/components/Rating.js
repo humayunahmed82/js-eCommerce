@@ -1,6 +1,10 @@
 const Rating = {
     render: (props) => {
+        if (!props.value) {
+            return `<div></div>`;
+        }
         return `  
+        <div class="flex space-x-2 items-center">
         <div class="relative ">
             <div class="flex">
 
@@ -86,7 +90,7 @@ const Rating = {
         </div>
 
         <p class="text-slate-400 text-base font-medium">${props.text || ""}<p/>
-        
+        </div>
         
         `;
     },

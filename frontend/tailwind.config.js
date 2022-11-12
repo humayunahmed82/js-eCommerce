@@ -19,14 +19,6 @@ module.exports = {
             fontFamily: {
                 quicksand: ["Quicksand", "sans-serif"],
             },
-
-            colors: {
-                primary: "#1D2024",
-                body: "#505050",
-                secondary: "#9F9F9F",
-                others_one: "#8B8B8B",
-                others_tow: "#707070",
-            },
         },
     },
     plugins: [
